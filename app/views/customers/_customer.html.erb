@@ -1,0 +1,20 @@
+<!-- app/views/customers/_customer.html.erb -->
+
+<div class="box">
+
+  <% if customer.image.attached? %>
+    <%= image_tag customer.image, width: 100 %>
+    <% else %>
+    <p> No image</p>
+  <% end %>
+
+  <h2><%= customer.fullname %></h2>
+  <% if  customer.emailaddress?%>
+  <p>Email: <%= customer.emailaddress %></p>
+  <% end %>
+
+  <p>Phone: <%= customer.phoneno %></p>
+
+  <p>Notes: <%= customer.notes %></p>
+
+</div>
