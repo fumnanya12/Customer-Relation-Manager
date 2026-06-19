@@ -1,6 +1,6 @@
 <!-- app/views/customers/_customer.html.erb -->
 
-<div class="box">
+<div class="customer-card">
 
   <% if customer.image.attached? %>
     <%= image_tag customer.image, width: 100 %>
@@ -8,9 +8,11 @@
     <p> No image</p>
   <% end %>
 
-  <h2><%= customer.fullname %></h2>
+  <h2 class="customer-name"><%= customer.fullname %></h2>
   <% if  customer.emailaddress?%>
   <p>Email: <%= customer.emailaddress %></p>
+   <% else %>
+     <p>Email: No email</p>
   <% end %>
 
   <p>Phone: <%= customer.phoneno %></p>

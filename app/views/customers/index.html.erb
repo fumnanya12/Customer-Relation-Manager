@@ -2,4 +2,8 @@
 
 <h1>Customers</h1>
 
+<nav class="navigation ">
+  <%= link_to "Alphabetized Customers", alphabetized_customers_path %> |
+  <%= link_to "Missing Email Customers", missing_email_customers_path %>
+</nav>
 <%= render @customers %>

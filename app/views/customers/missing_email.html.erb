@@ -1,0 +1,8 @@
+<!-- app/views/customers/missing_email.html.erb -->
+
+<h1>Customers with no Email Address</h1>
+<nav class="navigation ">
+  <%= link_to "All Customers", customers_path %>
+  <%= link_to "Alphabetized Customers", alphabetized_customers_path %> |
+</nav>
+<%= render @customers %>
